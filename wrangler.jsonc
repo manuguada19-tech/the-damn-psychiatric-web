@@ -1,0 +1,8 @@
+{
+  "name": "the-damn-psychiatric-web",
+  "compatibility_date": "2026-11-19",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  }
+}
