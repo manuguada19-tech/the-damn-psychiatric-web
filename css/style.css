@@ -1,4 +1,19 @@
-/* ============================================================
+/* 
+/* ---------- FIX MOVIL (pegar por donde sea, da igual) ---------- */
+@media (max-width:980px){
+  .file-grid{ grid-template-columns:1fr; }
+  .spec-grid{ grid-template-columns:1fr; }
+  .spec-visual{ max-width:420px; }
+  .dossier{ transform:none; max-width:520px; }
+  .mech-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:720px){
+  .spec-list>div{ grid-template-columns:1fr; gap:.1rem; }
+  .spec-list dt{ padding-top:0; }
+  .mech-grid{ grid-template-columns:1fr; }
+  .gallery{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+}
+============================================================
    THE DAMN PSYCHIATRIC — estilo "Expediente San Lucas"
    Paleta: verde quirúrgico profundo + tinta casi negra +
    papel de expediente + rojo médico (cruz del logo)
