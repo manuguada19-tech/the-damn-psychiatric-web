@@ -567,3 +567,58 @@ body.caught{ animation:caught .5s linear 2; }
 
 
 .mulepage-float,[class^="mulepage-"],[class*=" mulepage-"]{ display:none !important; }
+
+/* ---------- HERO MÓVIL: fondo más visible e impactante ---------- */
+@media (max-width:760px){
+  .hero-bg{
+    background:
+      linear-gradient(180deg, rgba(7,16,13,.40), rgba(7,16,13,.15) 45%, var(--bg) 95%),
+      url("../assets/img/bg.png") 62% 30% / auto 125% no-repeat;
+    filter:brightness(1.18) saturate(1.15);
+    transform:none;
+    animation:none;
+  }
+  .hero{ min-height:94svh; padding-top:calc(var(--nav-h) + 1.2rem); }
+  .title-logo{ width:clamp(230px, 58vw, 300px); }
+  .hero-sub{ font-size:1.02rem; }
+}
+
+/* ---------- LA HISTORIA: expediente auténtico ---------- */
+.story{
+  position:relative;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(60,50,25,.10) 34px 35px),
+    linear-gradient(176deg, #ece5d2, #ddd4b9 62%, #d3c8a7);
+  color:#25221a;
+  max-width:none;
+  padding:2.6rem 2.4rem 2.8rem 3.4rem;
+  border-radius:2px;
+  box-shadow:0 26px 70px -18px rgba(0,0,0,.9), inset 0 0 120px rgba(125,105,60,.22);
+  transform:rotate(-.45deg);
+}
+.story::before{ /* sello del documento */
+  content:"INTERNAMIENTO 2035 · DOCUMENTO OFICIAL";
+  position:absolute; top:-16px; right:30px;
+  font-family:var(--ff-type); font-size:.68rem; letter-spacing:.24em;
+  color:var(--red); background:rgba(236,229,210,.96);
+  border:2px solid var(--red); border-radius:3px;
+  padding:.4rem 1rem; transform:rotate(3deg);
+}
+.story::after{ /* perforadora de carpeta */
+  content:""; position:absolute; left:16px; top:8px; bottom:0; width:12px;
+  background-image:radial-gradient(circle, #a89c78 5.5px, transparent 6.5px);
+  background-size:12px 130px; background-repeat:repeat-y; background-position:0 110px;
+  opacity:.75;
+}
+.story p{ color:#2a271d; }
+.story em{ color:#161410; font-weight:600; }
+.story-note{ color:#6f664a; }
+.story-q{ color:#14120c !important; border-left-color:var(--red); }
+.story-q strong{ color:#a5170f; }
+@media (max-width:980px){
+  .story{ padding:2.2rem 1.4rem 2.4rem 2.6rem; transform:none; }
+  .story::before{ right:14px; top:-14px; font-size:.58rem; }
+}
+/* el enemigo Observa */
+.mech-big h3{ color:var(--red-hi); text-shadow:0 0 22px rgba(225,52,51,.4); animation:flick 5s linear infinite; }
+@media (prefers-reduced-motion:reduce){ .mech-big h3{ animation:none; } }
